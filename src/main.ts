@@ -7,6 +7,7 @@ import 'virtual:svg-icons-register'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import gloablComponent from './components/index';
 import '@/styles/index.scss'
+import router from './router'
 
 const app = createApp(App)
 //注册Elment-Plus
@@ -15,4 +16,5 @@ app.use(ElementPlus, {
 })
 //注册全局组件
 app.use(gloablComponent);
+app.use(router)
 app.mount('#app')

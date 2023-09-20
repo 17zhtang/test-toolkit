@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<router-view></router-view>
+		<h1>home</h1>
+		<el-input></el-input>
 	</div>
 </template>
 
