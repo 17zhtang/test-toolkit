@@ -30,8 +30,12 @@
 import {reactive} from 'vue'
 import {reqLogin} from '@/api/user/index'
 import {ElMessage} from 'element-plus'
+import { useRouter, useRoute } from 'vue-router'
 let loginForm = reactive({account:'',password:''})
 
+let $router = useRouter();
+//路由对象
+let $route = useRoute();
 
 const login = async() =>{
 	let result =await reqLogin(loginForm)
@@ -42,6 +46,7 @@ const login = async() =>{
 			type:'success',
 			message:'登录成功'
 		})
+		$router.push('/')
 	} else {
 		ElMessage({
 			type:'error',

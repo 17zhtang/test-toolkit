@@ -14,3 +14,4 @@ export interface ResponseData {
 export interface loginResponseData extends ResponseData {
   data: string;
 }
+

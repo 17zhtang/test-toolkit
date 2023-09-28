@@ -4,7 +4,9 @@
 			<el-header class="header" style="background:#138D75">Header</el-header>
 			<el-container>
 				<el-aside style="background:#AEB6BF" width="200px">Aside</el-aside>
-				<el-main>Main</el-main>
+				<el-main>
+					<router-view></router-view>
+				</el-main>
 			</el-container>
 		</el-container>
 	</div>
