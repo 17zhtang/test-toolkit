@@ -1,11 +1,19 @@
 <template>
 	<div class="layout">
 		<el-container class="container">
-			<el-header class="header" style="background:#138D75">Header</el-header>
+			<el-header class="header">
+				<Header></Header>
+			</el-header>
 			<el-container>
-				<el-aside style="background:#AEB6BF" width="200px">Aside</el-aside>
+				<el-aside style="background:#AEB6BF" width="200px">
+					<el-scrollbar>
+						<el-menu>
+							<Menu :menuList="userStore.menuRoutes"></Menu>
+						</el-menu>
+					</el-scrollbar>
+				</el-aside>
 				<el-main>
-					<router-view></router-view>
+					<MainContent></MainContent>
 				</el-main>
 			</el-container>
 		</el-container>
@@ -13,7 +21,11 @@
 </template>
 
 <script setup lang="ts">
-
+import useUserStore from '@/store/modules/user'
+import Menu from './Menu/index.vue'
+import Header from './Header/index.vue'
+import MainContent from './MainContent/index.vue'
+let userStore = useUserStore()
 </script>
 
 <style scoped lang="scss">
@@ -24,8 +36,11 @@
 	.container {
 		width: 100%;
 		height: 100vh;
-		.header{
-			height:80px
+
+		.header {
+			height: 60px;
+			background: #138D75;
+			padding: 0px;
 		}
 	}
 }

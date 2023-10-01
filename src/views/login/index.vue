@@ -2,11 +2,12 @@
 	<div class="container">
 		<el-row>
 			<el-col :span="13">
+				<svg-icon style="margin:100px 100px" name="login" width="700px" height="700px"></svg-icon>
 			</el-col>
 			<el-col :span="6">
 				<el-card class="box-card">
 					<div>
-						<h1 class='title'>测试</h1>
+						<h1 class='title'>测试工具箱</h1>
 					</div>
 					<el-form class="form">
 						<el-form-item  label="账号" class="input">
@@ -60,7 +61,6 @@ const login = async() =>{
 .container {
 	width: 100%;
 	height: 100vh;
-	background: url('@/assets/images/background.jpg') no-repeat;
 	background-size: cover;
 	.title{
 		text-align: center;

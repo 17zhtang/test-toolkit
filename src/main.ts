@@ -8,7 +8,7 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import gloablComponent from './components/index';
 import '@/styles/index.scss'
 import router from './router'
-
+import pinia from './store'
 const app = createApp(App)
 //注册Elment-Plus
 app.use(ElementPlus, {
@@ -17,4 +17,5 @@ app.use(ElementPlus, {
 //注册全局组件
 app.use(gloablComponent);
 app.use(router)
+app.use(pinia)
 app.mount('#app')

@@ -1,13 +1,21 @@
 <template>
-	<div>
-		<el-input v-model="test"></el-input>
+	<div class="box">
+		<svg-icon class="img" name="404" width="900px" height="900px"></svg-icon>
 	</div>
+	
 </template>
 
 <script setup lang="ts">
-let test = ''
+
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.box{
+	text-align:center;
+	width: 100%;
+	height: 100vh;
+	.img{
+		vertical-align:middle
+	}
+}
 </style>
