@@ -6,7 +6,10 @@
         <el-button size="small" type="primary" @click="visible = false">确定</el-button>
       </div>
       <template #reference>
-        <img :src="test" class="avatar" @click="visible=true">
+        <div class="avatar_box">
+          <h1 class="username">admin</h1>
+          <img :src="test" class="avatar" @click="visible=true">
+        </div>
       </template>
     </el-popover>
   </div>
@@ -19,6 +22,15 @@ let test = 'src/assets/images/test.jpg'
 </script>
 
 <style scoped lang="scss">
+.username{
+  color: white;
+  margin-right: 15px;
+}
+.avatar_box{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
 .avatar {
   width: 40px;
   height: 40px;

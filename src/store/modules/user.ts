@@ -10,10 +10,12 @@ import { register } from 'module'
 let useUserStore = defineStore('User', {
   state: (): UserState => {
     return {
-      token: '',
+      // token: '',
+      token: 'fake token',
       menuRoutes: constantRoute, //仓库存储菜单
       account:'',
-      username: '',
+      // username: '',
+      username: 'admin',
       avatar: '',
     }
   },

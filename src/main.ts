@@ -9,6 +9,7 @@ import gloablComponent from './components/index';
 import '@/styles/index.scss'
 import router from './router'
 import pinia from './store'
+
 const app = createApp(App)
 //注册Elment-Plus
 app.use(ElementPlus, {
@@ -18,4 +19,6 @@ app.use(ElementPlus, {
 app.use(gloablComponent);
 app.use(router)
 app.use(pinia)
+
+import '@/router/permission'
 app.mount('#app')
