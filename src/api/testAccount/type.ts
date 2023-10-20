@@ -20,7 +20,7 @@ export interface testAccountRecord {
 }
 
 export interface testAccountRecords {
-	records:testAccountRecord;
+	records:testAccountRecord[];
 	total:number;
 	size:number;
 	current:number;
