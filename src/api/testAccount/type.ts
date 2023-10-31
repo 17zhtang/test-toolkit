@@ -3,6 +3,8 @@ export interface getTestAccountsRquestData {
   environment: string;
 	detail:string;
 	creator:string;
+	currentPage:number;
+	pageSize:number;
 }
 
 export interface ResponseData {

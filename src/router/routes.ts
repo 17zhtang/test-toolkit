@@ -93,6 +93,72 @@ export const constantRoute = [
       },
     ],
   },
+	
+
+	{
+    path: "/timestamp",
+    component: () => import("@/layout/index.vue"),
+    meta: {
+      title: "时间戳转换",
+      hidden: false,
+      icon: "Timer",
+    },
+    children: [
+      {
+        path: "/timestamp/",
+        component: () => import("@/views/Timestamp/index.vue"),
+        meta: {
+          title: "时间戳转换",
+          hidden: false,
+          icon: "Timer",
+        },
+      },
+    ],
+  },
+
+
+	{
+    path: "/jsonFormat",
+    component: () => import("@/layout/index.vue"),
+    meta: {
+      title: "json格式化",
+      hidden: false,
+      icon: "ArrowRightBold",
+    },
+    children: [
+      {
+        path: "/jsonFormat/",
+        component: () => import("@/views/JsonFormat/index.vue"),
+        meta: {
+          title: "json格式化",
+          hidden: false,
+          icon: "ArrowRightBold",
+        },
+      },
+    ],
+  },
+
+	{
+    path: "/QRCode",
+    component: () => import("@/layout/index.vue"),
+    meta: {
+      title: "生成二维码",
+      hidden: false,
+      icon: "ArrowRightBold",
+    },
+    children: [
+      {
+        path: "/QRCode",
+        component: () => import("@/views/QRCode/index.vue"),
+        meta: {
+          title: "生成二维码",
+          hidden: false,
+          icon: "Grid",
+        },
+      },
+    ],
+  },
+
   {
     path: "/test",
     component: () => import("@/layout/index.vue"),

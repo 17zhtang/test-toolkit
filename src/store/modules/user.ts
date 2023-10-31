@@ -11,7 +11,7 @@ let useUserStore = defineStore('User', {
   state: (): UserState => {
     return {
       // token: '',
-      token: 'fake token',
+      token: 'eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_6tWKi5NUrJSiox099ANDXYNUtJRSq0oULIyNDcwMDOxNDS01FEqLU4t8kwBitUCABkxBP4vAAAA.Lg2ftGxvnHzbpGcnBvct16SUy6C-uCnGiOGdT3vFNK0lOwUT3aXUPHGyggGAP0yuRgTuPi3rkX0GTZ0Ftnv4uw',
       menuRoutes: constantRoute, //仓库存储菜单
       account:'',
       // username: '',

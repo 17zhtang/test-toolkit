@@ -33,7 +33,8 @@ export default defineConfig (({ command, mode }) => {
       },
     },
     server:{
-      port:5174,
+			host:"0.0.0.0",   //允许局域网内访问
+      port:5173,
       proxy:{
         [env.VITE_APP_BASE_API]:{
           target: env.VITE_SERVE,
