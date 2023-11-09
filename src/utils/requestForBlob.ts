@@ -1,7 +1,6 @@
 import axios from "axios";
 import useUserStore from '@/store/modules/user'
 import { ElMessage } from "element-plus";
-import { useRouter, useRoute } from "vue-router";
 //创建axios实例
 let request = axios.create({
     // baseURL: import.meta.env.VITE_APP_BASE_API,
@@ -44,11 +43,9 @@ request.interceptors.response.use((response) => {
         type: 'error',
         message: msg
     })
-		if(status == 403){
-			console.log("响应拦截器，过期")
-			let $router = useRouter();
-			$router.push({ path: "/login" });
-		}
     return Promise.reject(error);
 });
+
+request.defaults.responseType = 'blob'
+
 export default request;

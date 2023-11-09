@@ -11,12 +11,12 @@ let useUserStore = defineStore('User', {
   state: (): UserState => {
     return {
       // token: '',
-      token: 'eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_6tWKi5NUrJSiox099ANDXYNUtJRSq0oULIyNDcwMDOxNDS01FEqLU4t8kwBitUCABkxBP4vAAAA.Lg2ftGxvnHzbpGcnBvct16SUy6C-uCnGiOGdT3vFNK0lOwUT3aXUPHGyggGAP0yuRgTuPi3rkX0GTZ0Ftnv4uw',
+      token: '',
       menuRoutes: constantRoute, //仓库存储菜单
       account:'',
       // username: '',
       username: 'admin',
-      avatar: '',
+      avatar: 'https://hll-common.61info.cn/test/app-resource-ui/6541c9955aecc90001b4c7f7.png',
     }
   },
   actions: {
@@ -50,6 +50,7 @@ let useUserStore = defineStore('User', {
       }
     },
     async userLogout() {
+			console.log("store退出登录")
       let result:any = await reqLogout()
       if (result.code == 200) {
         this.token = ''

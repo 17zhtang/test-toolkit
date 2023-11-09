@@ -1,6 +1,6 @@
 import request from "@/utils/request";
 
-//项目用户相关的请求地址
+
 import {getTestAccountsRquestData,getTestAccountsResponseData,testAccountRecord} from './type'
 
 enum API {
