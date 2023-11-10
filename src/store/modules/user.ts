@@ -62,6 +62,13 @@ let useUserStore = defineStore('User', {
         return Promise.reject(new Error(result.message))
       }
     },
+		tokenError(){
+			console.log("store token错误")
+			this.token = ''
+      this.username = ''
+      this.avatar = ''
+      REMOVE_TOKEN()
+		}
   },
   getters: {},  
 })

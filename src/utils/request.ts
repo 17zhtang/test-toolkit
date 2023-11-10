@@ -1,8 +1,11 @@
 import axios from "axios";
 import useUserStore from '@/store/modules/user'
 import { ElMessage } from "element-plus";
-import { useRouter, useRoute } from "vue-router";
+// import { useRouter, useRoute } from "vue-router";
+import $router from '@/router'
 //创建axios实例
+// let userStore = useUserStore()
+
 let request = axios.create({
     // baseURL: import.meta.env.VITE_APP_BASE_API,
     baseURL:import.meta.env.VITE_SERVE,
@@ -22,8 +25,9 @@ request.interceptors.response.use((response) => {
 	console.log(response.data)
     return response.data;
 }, (error) => {
+		let userStore = useUserStore()
     let msg = '';
-    let status = error.response.status;
+    const status = error.response.status
     switch (status) {
         case 401:
             msg = "token过期";
@@ -44,9 +48,9 @@ request.interceptors.response.use((response) => {
         type: 'error',
         message: msg
     })
-		if(status == 403){
+		if(status == 401){
 			console.log("响应拦截器，过期")
-			let $router = useRouter();
+			userStore.tokenError()
 			$router.push({ path: "/login" });
 		}
     return Promise.reject(error);
